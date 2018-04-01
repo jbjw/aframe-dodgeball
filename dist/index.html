@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>repo-template</title>
+		<!-- <style></style> -->
+		<!-- <link type="text/css" rel="stylesheet" href="index.css"/> -->
+	</head>
+	<body>
+		<div id="root"></div>
+		<a-scene physics="debug: true">
+			<a-assets>
+			</a-assets>
+			<a-entity environment></a-entity>
+			<a-plane static-body></a-plane>
+			<a-box dynamic-body position="5 0.5 0" width="1" height="1" depth="1"></a-box>
+			<a-cube width="3" color="red"></a-cube>
+			<!-- <a-entity geometry="primitive: box; width: 3" material="color: red"></a-entity> -->
+			<!-- <a-entity id="player"></a-entity> -->
+
+			<!-- <a-camera look-controls-enabled="true" wasd-controls-enabled="true"
+				cursor-color="#F00" cursor-maxdistance="100" cursor-offset="10"
+				position="0 1.8 4"></a-camera> -->
+
+			<!-- <a-entity id="monster" geometry="primitive: box" material="src: img/tall.jpg"
+				look-at="[camera]"></a-entity> -->
+
+			<!-- <a-light type="ambient"></a-light>
+			<a-light type="directional"></a-light>
+			<a-light type="hemisphere"></a-light>
+			<a-light type="point"></a-light>
+			<a-light type="spot"></a-light> -->
+
+
+			<!-- <a-entity id="tree" position="30 12 86">
+				<a-sphere color="green" radius="0.5" position="0 1.5 0"></a-sphere>
+				<a-cylinder color="brown" radius="0.2" height="1" position="0 0.5 0"></a-cylinder>
+			</a-entity> -->
+			<!-- <a-entity geometry="primitive: box; depth: 1; height: 1; width: 1"
+				material="color: pink"
+				light="intensity: 2"
+				position="-1 5 0"
+				sound="src: dangerzone.mp3; volume: 2"></a-entity> -->
+			<!-- <a-cube color="yellow">
+				<a-animation attribute="rotation" from="0 0 0" to="0 270 0" repeat="indefinite" easing="linear"></a-animation>
+			</a-cube> -->
+		</a-scene>
+		<script src="bundle.js"></script>
+	</body>
+</html>

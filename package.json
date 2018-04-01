@@ -1,0 +1,43 @@
+{
+	"name": "aframe-dodgeball",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"start": "webpack-dev-server",
+		"build": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server-wds": "webpack-dev-server",
+		"server-http": "http-server source -p 80 -c-1 -o --cors",
+		"server-node": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jbjw/aframe-dodgeball.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jbjw/aframe-dodgeball/issues"
+	},
+	"homepage": "https://github.com/jbjw/aframe-dodgeball#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.2.2",
+		"babel-loader": "^7.1.4",
+		"babel-preset-env": "^1.6.1",
+		"css-loader": "^0.28.11",
+		"eslint": "^4.19.1",
+		"eslint-loader": "^2.0.0",
+		"http-server": "^0.11.1",
+		"style-loader": "^0.20.3",
+		"webpack": "^4.4.1",
+		"webpack-cli": "^2.0.13",
+		"webpack-dev-server": "^3.1.1"
+	},
+	"dependencies": {
+		"aframe": "^0.8.1",
+		"aframe-environment-component": "^1.0.0",
+		"aframe-physics-system": "^3.0.2"
+	}
+}
