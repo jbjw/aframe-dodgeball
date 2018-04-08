@@ -5,16 +5,43 @@
 		<title>repo-template</title>
 		<!-- <style></style> -->
 		<!-- <link type="text/css" rel="stylesheet" href="index.css"/> -->
+		<script src="bundle.js"></script>
 	</head>
 	<body>
 		<div id="root"></div>
-		<a-scene physics="debug: true">
+		<a-scene dodgeball physics="debug: true; gravity: -9.8">
 			<a-assets>
 			</a-assets>
-			<a-entity environment></a-entity>
-			<a-plane static-body></a-plane>
-			<a-box dynamic-body position="5 0.5 0" width="1" height="1" depth="1"></a-box>
-			<a-cube width="3" color="red"></a-cube>
+			<a-entity id="environment" environment="preset: forest;"></a-entity>
+			<!-- <a-plane static-body></a-plane> -->
+			<a-plane static-body visible="false" height="100" width="100" rotation="-90 0 0"></a-plane>
+			<a-entity id="cameraRig" position="0 1.6 0">
+				<!-- camera="userHeight: 1.6" -->
+				<a-entity id="head" wasd-controls look-controls></a-entity>
+
+				<a-entity
+					id="left-hand"
+					vive-controls="hand: left"
+					line="color: blue; opacity: 0.5">
+				</a-entity>
+				<!-- teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; collisionEntities: .environmentGround .environmentDressing" -->
+				<!-- material="color: blue" -->
+				<!-- laser-controls="hand: left" -->
+
+				<a-entity
+					id="right-hand"
+					vive-controls="hand: right"
+					line="color: red; opacity: 0.5">
+				</a-entity>
+				<!-- laser-controls="hand: right" -->
+				<!-- teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head"  -->
+				<!-- material="color: red" -->
+			</a-entity>
+			<!-- collisionEntities: .environmentGround. You can also add .environmentDressing -->
+
+			<!-- <a-box dynamic-body position="0 10 -10" width="1" height="1" depth="1"></a-box>
+			<a-sphere dynamic-body position="0.01 5 -10" radius="1"></a-sphere> -->
+			<!-- <a-cube width="3" color="red"></a-cube> -->
 			<!-- <a-entity geometry="primitive: box; width: 3" material="color: red"></a-entity> -->
 			<!-- <a-entity id="player"></a-entity> -->
 
@@ -45,6 +72,5 @@
 				<a-animation attribute="rotation" from="0 0 0" to="0 270 0" repeat="indefinite" easing="linear"></a-animation>
 			</a-cube> -->
 		</a-scene>
-		<script src="bundle.js"></script>
 	</body>
 </html>

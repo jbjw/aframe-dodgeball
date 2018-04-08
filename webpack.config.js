@@ -3,6 +3,7 @@ const path = require( "path" )
 module.exports = {
 	mode: "development",
 	entry: "./source/main.js",
+	devtool: "eval-source-map",
 	output: {
 		filename: "bundle.js",
 		path: path.resolve( __dirname, "dist" ),
@@ -26,6 +27,9 @@ module.exports = {
 		overlay: {
 			warnings: true,
 			errors: true,
+		},
+		headers: {
+			"Access-Control-Allow-Origin": "*",
 		},
 		// https: true,
 	},
